@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dashboard | Jonnie's Cutz</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js" defer></script>
+</head>
+<body data-page="dashboard">
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-mark">JC</div>
+                <h2>JONNIE'S CUTZ</h2>
+                <p>ADMINISTRATION</p>
+            </div>
+
+            <nav>
+                <a href="dashboard.html" class="nav-link active">▦ Dashboard</a>
+                <a href="#appointments" class="nav-link">▤ Appointments</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Administrator</p>
+                <strong id="admin-email-display">Loading...</strong>
+                <button id="logout-button" class="logout-button">Sign Out ↗</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <p class="eyebrow">JONNIE'S CUTZ MANAGEMENT</p>
+                    <h1>Dashboard</h1>
+                    <p class="header-subtitle">Manage your appointments and daily operations.</p>
+                </div>
+
+                <button id="refresh-button" class="refresh-button">↻ Refresh</button>
+            </header>
+
+            <div id="dashboard-message" role="status"></div>
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <p>Total Appointments</p>
+                    <h2 id="total-count">—</h2>
+                    <span>All recorded bookings</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Today's Appointments</p>
+                    <h2 id="today-count">—</h2>
+                    <span>Bookings scheduled today</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Upcoming</p>
+                    <h2 id="upcoming-count">—</h2>
+                    <span>Confirmed future bookings</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Completed</p>
+                    <h2 id="completed-count">—</h2>
+                    <span>Successfully completed</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Cancelled</p>
+                    <h2 id="cancelled-count">—</h2>
+                    <span>Cancelled appointments</span>
+                </article>
+
+            </section>
+
+            <section class="appointments-section" id="appointments">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">BOOKING MANAGEMENT</p>
+                        <h2>Appointments</h2>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <input type="search" id="search-bookings"
+                        placeholder="Search customer, phone or service...">
+
+                    <input type="date" id="filter-date">
+
+                    <select id="filter-status">
+                        <option value="all">All statuses</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+
+                    <select id="filter-branch">
+                        <option value="all">All branches</option>
+                        <option value="Abossey Okai">Abossey Okai</option>
+                        <option value="Zongo Market">Zongo Market</option>
+                    </select>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Service</th>
+                                <th>Branch / Barber</th>
+                                <th>Date & Time</th>
+                                <th>Status</th>
+                                <th>Manage</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="appointments-body">
+                            <tr>
+                                <td colspan="6" class="empty-state">
+                                    Loading appointments...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="table-footer" id="booking-results">
+                    Loading records...
+                </p>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                © 2026 JONNIE'S CUTZ — ADMINISTRATION PORTAL
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
