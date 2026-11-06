@@ -50,21 +50,22 @@ popup.addEventListener("click", e => {
     }
 });
 
-// 💎 SAFE LOADER FIX
-window.addEventListener("DOMContentLoaded", () => {
-    const loader = document.getElementById("loader");
+// JONNIE'S CUTZ PRELOADER
 
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.transition = "0.6s ease";
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
 
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 600);
+    if (preloader) {
+        setTimeout(function () {
+            preloader.classList.add("hide-loader");
 
-    }, 1200);
+            setTimeout(function () {
+                preloader.style.display = "none";
+            }, 800);
+
+        }, 1200);
+    }
 });
-
 // Initialize EmailJS
 (function(){
     emailjs.init("TJx3FNm7lGoHznY_k");

@@ -419,3 +419,740 @@ footer {
         font-size: 2rem;
     }
 }
+
+
+
+/* ==========================================
+   JONNIE'S CUTZ — LUXURY SERVICES MENU
+   Black, champagne gold & ivory
+========================================== */
+
+.lux-services {
+    --lux-gold: #d6b46a;
+    --lux-gold-light: #f0d99e;
+    --lux-dark: #11110f;
+    --lux-panel: #191916;
+    --lux-cream: #f5f0e5;
+
+    position: relative;
+    padding: 100px 6%;
+    color: var(--lux-cream);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(214,180,106,.12), transparent 50%),
+        linear-gradient(145deg, #0c0c0b, #151512 55%, #0b0b0a);
+    overflow: hidden;
+}
+
+.lux-services,
+.lux-services * {
+    box-sizing: border-box;
+}
+
+.lux-services-header {
+    max-width: 760px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.lux-eyebrow,
+.lux-services-cta > span {
+    display: inline-block;
+    color: var(--lux-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.8;
+}
+
+.lux-services-header h2 {
+    margin: 18px 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.lux-services-header h2 span {
+    color: var(--lux-gold);
+    font-style: italic;
+}
+
+.lux-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.lux-divider::before,
+.lux-divider::after {
+    content: "";
+    width: 65px;
+    height: 1px;
+    background: rgba(214,180,106,.45);
+}
+
+.lux-divider span {
+    width: 8px;
+    height: 8px;
+    margin: 0 12px;
+    background: var(--lux-gold);
+    transform: rotate(45deg);
+}
+
+.lux-services-header > p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #bdbbb3;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.lux-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1450px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.lux-service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 29px 25px 25px;
+    border: 1px solid rgba(214,180,106,.19);
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1b1b17, #121210);
+    box-shadow: 0 12px 32px rgba(0,0,0,.16);
+    transition: transform .3s ease, border-color .3s ease,
+                box-shadow .3s ease;
+}
+
+.lux-service-card::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 25px;
+    width: 48px;
+    height: 2px;
+    background: var(--lux-gold);
+    transition: width .3s ease;
+}
+
+.lux-service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(214,180,106,.65);
+    box-shadow: 0 18px 40px rgba(0,0,0,.3);
+}
+
+.lux-service-card:hover::before {
+    width: calc(100% - 50px);
+}
+
+.lux-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.lux-number {
+    color: #8c805f;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.lux-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 1px solid rgba(214,180,106,.35);
+    border-radius: 50%;
+    color: var(--lux-gold);
+    font-size: 17px;
+}
+
+.lux-service-card h3 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.lux-description {
+    min-height: 48px;
+    margin: 0 0 20px;
+    color: #a9a79f;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.lux-price-list {
+    margin-top: auto;
+}
+
+.lux-price-list > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255,255,255,.075);
+}
+
+.lux-price-list > div:last-child {
+    border-bottom: none;
+}
+
+.lux-price-list > div > span {
+    min-width: 0;
+    color: #d0cec5;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.lux-price-list > div > strong {
+    flex-shrink: 0;
+    color: var(--lux-gold-light);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.lux-service-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 20px 23px;
+    border: 1px solid rgba(214,180,106,.22);
+    border-radius: 4px;
+    background: rgba(214,180,106,.045);
+}
+
+.lux-service-note > i {
+    padding-top: 3px;
+    color: var(--lux-gold);
+    font-size: 18px;
+}
+
+.lux-service-note p {
+    margin: 0;
+    color: #bdbbb3;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.lux-service-note strong {
+    color: var(--lux-gold-light);
+}
+
+.lux-services-cta {
+    max-width: 850px;
+    margin: 65px auto 0;
+    padding: 48px 25px;
+    border: 1px solid rgba(214,180,106,.28);
+    background: linear-gradient(130deg, rgba(214,180,106,.08), rgba(255,255,255,.015));
+    text-align: center;
+}
+
+.lux-services-cta h3 {
+    margin: 14px 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 500;
+}
+
+.lux-services-cta p {
+    max-width: 550px;
+    margin: 0 auto 26px;
+    color: #bdbbb3;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.lux-book-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 15px 24px;
+    border: 1px solid var(--lux-gold);
+    border-radius: 2px;
+    background: var(--lux-gold);
+    color: #17150f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background .25s ease, color .25s ease,
+                transform .25s ease;
+}
+
+.lux-book-button:hover {
+    transform: translateY(-2px);
+    background: transparent;
+    color: var(--lux-gold-light);
+}
+
+@media (max-width: 1050px) {
+    .lux-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .lux-services {
+        padding: 75px 4%;
+    }
+}
+
+@media (max-width: 600px) {
+    .lux-services {
+        padding: 60px 17px;
+    }
+
+    .lux-services-header {
+        margin-bottom: 38px;
+    }
+
+    .lux-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .lux-services-header h2 {
+        letter-spacing: -.5px;
+    }
+
+    .lux-services-header > p {
+        font-size: 13px;
+    }
+
+    .lux-service-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .lux-service-card {
+        padding: 25px 21px 20px;
+    }
+
+    .lux-service-card h3 {
+        font-size: 24px;
+    }
+
+    .lux-price-list > div {
+        padding: 14px 0;
+    }
+
+    .lux-price-list > div > span {
+        font-size: 13px;
+    }
+
+    .lux-price-list > div > strong {
+        font-size: 13px;
+    }
+
+    .lux-service-note {
+        padding: 17px;
+    }
+
+    .lux-services-cta {
+        margin-top: 42px;
+        padding: 35px 19px;
+    }
+
+    .lux-book-button {
+        width: 100%;
+        padding: 16px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lux-service-card,
+    .lux-service-card::before,
+    .lux-book-button {
+        transition: none;
+    }
+
+    .lux-service-card:hover,
+    .lux-book-button:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================
+   JONNIE'S SPECIAL HAIRCUT PRICE MENU
+========================================= */
+
+.special-haircut-menu {
+    width: min(1100px, 92%);
+    margin: 70px auto;
+    padding: 45px 30px;
+    background: linear-gradient(145deg, #111111, #1c1c1c);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 18px;
+    color: #f5f5f5;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+.special-menu-header {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.special-eyebrow {
+    color: #d4af37;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.special-menu-header h2 {
+    margin: 15px 0;
+    font-size: clamp(28px, 4vw, 42px);
+    color: #ffffff;
+}
+
+.special-menu-header h2 span {
+    color: #d4af37;
+}
+
+.special-menu-header p {
+    color: #c4c4c4;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.special-divider {
+    width: 75px;
+    height: 3px;
+    margin: 20px auto 0;
+    background: #d4af37;
+    border-radius: 10px;
+}
+
+.special-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.special-menu-card {
+    padding: 25px;
+    background: #171717;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    transition: border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.special-menu-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+}
+
+.special-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.special-card-heading i {
+    color: #d4af37;
+    font-size: 23px;
+}
+
+.special-card-heading h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.special-price-list > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+}
+
+.special-price-list > div:last-child {
+    border-bottom: none;
+}
+
+.special-price-list span {
+    color: #dedede;
+    line-height: 1.6;
+}
+
+.special-price-list strong {
+    color: #d4af37;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.special-price-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.09);
+    border-left: 4px solid #d4af37;
+    border-radius: 6px;
+}
+
+.special-price-notice > i {
+    color: #d4af37;
+    font-size: 21px;
+    margin-top: 3px;
+}
+
+.special-price-notice p {
+    margin: 0;
+    color: #dddddd;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.special-price-notice strong {
+    color: #d4af37;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 700px) {
+    .special-haircut-menu {
+        width: 92%;
+        padding: 30px 17px;
+        margin: 45px auto;
+    }
+
+    .special-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .special-menu-card {
+        padding: 20px 16px;
+    }
+
+    .special-card-heading h3 {
+        font-size: 16px;
+    }
+
+    .special-price-list > div {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .special-price-list strong {
+        font-size: 13px;
+    }
+
+    .special-price-notice {
+        padding: 15px;
+    }
+}
+
+.booking-availability {
+    margin: 12px 0;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: #222;
+    color: #ddd;
+}
+
+.booking-availability.is-success {
+    color: #4ade80;
+}
+
+.booking-availability.is-error {
+    color: #ff7777;
+}
+
+#booking-time option:disabled {
+    color: #999;
+}
+
+#booking-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   PREMIUM JONNIE'S CUTZ PRELOADER
+================================ */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#preloader.hide-loader {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+    width: 85%;
+    max-width: 350px;
+}
+
+/* Animated JC Logo */
+
+.loader-logo {
+    width: 95px;
+    height: 95px;
+    border: 2px solid #c9a34a;
+    border-radius: 50%;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: logoGlow 2s infinite ease-in-out;
+}
+
+.loader-logo::before {
+    content: "";
+    position: absolute;
+    inset: -9px;
+    border: 1px solid rgba(201, 163, 74, 0.4);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loaderSpin 3s linear infinite;
+}
+
+.loader-j,
+.loader-c {
+    font-size: 39px;
+    font-weight: 900;
+    color: #c9a34a;
+    font-family: Georgia, serif;
+}
+
+.loader-c {
+    margin-left: -10px;
+}
+
+/* Brand Name */
+
+.loader-content h1 {
+    color: #fff;
+    font-size: 27px;
+    letter-spacing: 5px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.loader-content h1 span {
+    color: #c9a34a;
+}
+
+.loader-subtitle {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 13px;
+}
+
+/* Loading Bar */
+
+.loader-line {
+    width: 100%;
+    height: 3px;
+    background: #292929;
+    margin-top: 35px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.loader-progress {
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c9a34a,
+        #fff0b0,
+        #c9a34a
+    );
+    animation: loadingMove 1.5s ease-in-out infinite;
+}
+
+.loader-text {
+    color: #c9a34a;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 17px;
+    animation: textPulse 1.5s infinite;
+}
+
+/* Animations */
+
+@keyframes loaderSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(201, 163, 74, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(201, 163, 74, 0.35);
+    }
+}
+
+@keyframes loadingMove {
+    0% {
+        transform: translateX(-120%);
+    }
+    100% {
+        transform: translateX(280%);
+    }
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 1;
+    }
+}
