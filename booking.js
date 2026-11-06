@@ -585,7 +585,7 @@ const { data, error } = await db.rpc(
                 barber,
                 date,
                 time: formatTime(time),
-                messageFF
+                message
             };
 
             // STEP 2: ATTEMPT BOTH EMAILS INDEPENDENTLY
